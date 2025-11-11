@@ -154,6 +154,16 @@
 }
     </style>
 </head>
+    <script>
+    // Check if the user is coming from the splash page (via a flag in session storage)
+    // If not, redirect them to the splash page and set the flag.
+    if (sessionStorage.getItem('splash_shown') !== 'true') {
+        sessionStorage.setItem('splash_shown', 'true');
+        // This directs the user to your splash page.
+        window.location.replace('splash.html'); 
+    }
+    // If the flag is set, they continue to view the index page.
+</script>
 <body>
 
     <header class="site-header">
