@@ -35,14 +35,15 @@
     padding: 20px;
 }
 
-/* --- Individual Product Card Styling --- */
+/* --- Individual Product Card Styling (Add or confirm this) --- */
 .product-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
+    
+    /* THIS is the key line for horizontal centering of text and inline elements */
+    **text-align: center;** transition: transform 0.3s;
 }
 
 .product-card:hover {
@@ -56,8 +57,10 @@
     margin-bottom: 15px;
 }
 
+/* Ensure the title also respects centering */
 .product-card h3 {
-    color: #6B8E23; /* Olive Green accent */
+    text-align: center;
+    color: #6B8E23;
     margin: 10px 0;
     font-size: 1.5em;
 }
@@ -69,10 +72,12 @@
     margin: 10px 0;
 }
 
+/* Ensure the description also respects centering */
 .description {
+    text-align: center;
     font-size: 0.95em;
     color: #666;
-    height: 60px; /* Gives consistent height for description area */
+    height: 60px; 
     margin-bottom: 20px;
 }
 
