@@ -5,132 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Winners Circle Clothing Brand</title>
     <style>
+   /* ==================================
+           2. C S S
+           ================================== */
         body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-/* --- Header Styling --- */
-.site-header {
-    background-color: #000;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 5px solid #6B8E23; /* Olive Green Accent */
-}
-.site-header h1 { margin: 0; font-size: 2.2em; }
-.site-header p { margin-top: 5px; opacity: 0.8; }
+        /* --- Header Styling --- */
+        .site-header {
+            background-color: #000;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #6B8E23; /* Olive Green Accent */
+        }
+        .site-header h1 { margin: 0; font-size: 2.2em; }
+        .site-header p { margin-top: 5px; opacity: 0.8; }
 
-/* --- Product Grid Layout --- */
-.product-grid {
-    display: grid;
-    /* Grid layout: 4 columns on large screens, stacks on small screens */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1300px;
-    margin: 40px auto;
-    padding: 20px;
-}
+        /* --- Product Grid Layout --- */
+        .product-grid {
+            display: grid;
+            /* Grid layout: 4 columns on large screens, stacks on small screens */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 20px;
+        }
 
-/* --- Individual Product Card Styling (Add or confirm this) --- */
-.product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    
-    /* THIS is the key line for horizontal centering of text and inline elements */
-    **text-align: center;** transition: transform 0.3s;
-}
+        /* --- Individual Product Card Styling --- */
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center; 
+            transition: transform 0.3s;
+        }
 
-.product-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-}
+        .product-card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+        }
 
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
 
-/* Ensure the title also respects centering */
-.product-card h3 {
-    text-align: center;
-    color: #6B8E23;
-    margin: 10px 0;
-    font-size: 1.5em;
-}
+        .product-card h3 {
+            color: #6B8E23; /* Olive Green accent */
+            margin: 10px 0;
+            font-size: 1.5em;
+            
+            /* FIX: Force text onto a single line */
+            white-space: nowrap;
+            overflow: hidden; 
+        }
 
-.price {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #000;
-    margin: 10px 0;
-}
+        .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000;
+            margin: 10px 0;
+        }
 
-/* Ensure the description also respects centering */
-.description {
-    text-align: center;
-    font-size: 0.95em;
-    color: #666;
-    height: 60px; 
-    margin-bottom: 20px;
-}
+        .description {
+            font-size: 0.95em;
+            color: #666;
+            height: 60px; /* Gives consistent height for description area */
+            margin-bottom: 20px;
+        }
 
-/* --- Buy Button Styling --- */
-.buy-button {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 15px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, opacity 0.3s;
-    font-size: 1.05em;
-}
+        /* --- Buy Button Styling --- */
+        .buy-button {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s, opacity 0.3s;
+            font-size: 1.05em;
+        }
 
-/* Button colors based on polo shirt (for visual interest) */
-.buy-button.black-bg {
-    background-color: #000;
-}
-.buy-button.black-bg:hover {
-    background-color: #333;
-}
-.buy-button.red-bg {
-    background-color: #CC0000;
-}
-.buy-button.red-bg:hover {
-    background-color: #A00000;
-}
-.buy-button.white-bg {
-    background-color: #f0f0f0;
-    color: #333; /* Dark text for light background */
-    border: 1px solid #ccc;
-}
-.buy-button.white-bg:hover {
-    background-color: #ddd;
-}
-.buy-button.green-bg {
-    background-color: #228B22;
-}
-.buy-button.green-bg:hover {
-    background-color: #1A6B1A;
-}
+        /* Button colors based on polo shirt (for visual interest) */
+        .buy-button.black-bg { background-color: #000; }
+        .buy-button.black-bg:hover { background-color: #333; }
+        
+        .buy-button.red-bg { background-color: #CC0000; }
+        .buy-button.red-bg:hover { background-color: #A00000; }
+        
+        .buy-button.white-bg { 
+            background-color: #f0f0f0; 
+            color: #333; 
+            border: 1px solid #ccc;
+        }
+        .buy-button.white-bg:hover { background-color: #ddd; }
+        
+        .buy-button.green-bg { background-color: #228B22; }
+        .buy-button.green-bg:hover { background-color: #1A6B1A; }
 
 
-/* --- Footer Styling --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #f4f4f4;
-    margin-top: 40px;
-}
+        /* --- Footer Styling --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #f4f4f4;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
