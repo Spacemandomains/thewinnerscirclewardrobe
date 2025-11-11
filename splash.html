@@ -45,9 +45,9 @@
             position: absolute; 
         }
 
-        /* --- Call to Action Button --- */
+        /* --- Call to Action Button (NOW IN LOWER RIGHT) --- */
         .cta-button {
-            position: relative; 
+            position: absolute; /* Changed to absolute */
             z-index: 10;
             background-color: #6B8E23; /* Olive Green */
             color: white;
@@ -61,7 +61,11 @@
             cursor: pointer;
             opacity: 0.9; 
             transition: opacity 0.3s, transform 0.3s;
-            margin-top: 25vh; /* Pushes the button down from the top center */
+            
+            /* *** POSITIONING FOR LOWER RIGHT CORNER *** */
+            bottom: 30px; 
+            right: 40px; 
+            /* ****************************************** */
         }
 
         .splash-link:hover .cta-button {
@@ -76,7 +80,7 @@
         
         <a href="index.html" class="splash-link">
             
-            <img src="https://thewinnerscirlcestore.netlify.app/splash%20page.png" 
+            <img src="YOUR_FULL_GITHUB_URL_HERE" 
                  alt="The Winners Circle Collection Drop" 
                  class="splash-image">
             
